@@ -1,45 +1,236 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min sida</title>
-    <style>
-        div {
-            width: 600px;
-            margin: auto;
-        }
+    <title>FreakyFashion</title>
 
-        img {
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Collegamento al foglio di stile esterno -->
+    <link rel="stylesheet" href="Css/style.css">
+
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="background-image">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#">FreakyFashion.se</a>
+        
+        
+        <!-- Checkbox per il menu hamburger -->
+        <input type="checkbox" id="menu-toggle">
+        
+        <!-- Icona hamburger -->
+        <label for="menu-toggle" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+
+        <!-- Menu di navigazione -->
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#"></a>
+            <a href="#">Servizi</a>
+            <a href="#">Contatti</a>
+        </div>
+    </nav>
+
+    <!-- Titolo principale -->
+    <h1 class="title center">FreakyFashion</h1>
     
-    <div class="grid">
-      
-        <div class="col-100">
-       
-        <h3> Välkommen till min sida </h3>
-       
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Eligendi exercitationem eaque temporibus similique nam consectetur
-            nostrum distinctio quae veritatis, nulla minima laboriosam deserunt iste impedit
-            ab illo? Expedita, odio unde.
-        </p>
-        
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, quod?
-        </p>
-        
-        <img src="https://placehold.co/400x400" alt="En bild">
-       
-        <h2>Mina intressen</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis amet vel animi similique nemo obcaecati corporis explicabo, dolor est et quidem cumque neque eius doloremque, laudantium tenetur a? Nobis, pariatur?        </p>
+    <!-- Immagine principale -->
+    <img src="img/DALL·E 2024-09-12 09.47.01 - A stylish and elegant horizontal logo design with the text 'FreakyFashion' in calligraphy style. The colors should be autumnal, featuring deep oranges.webp" class="img-fluid reduce-40" alt="logo">
+
+    <h1>Välkommen till min sida</h1>
+        <p>Casual Menswear Styling</p>
+   
+
+    <!-- Barra di ricerca -->
+    <div class="search-bar">
+        <form action="#" method="GET">
+            <input type="text" placeholder="Cerca nel sito..." name="search">
+            <button type="submit">Cerca</button>
+            <ul class="icon-container"></ul>
+                <ul><i class="bi bi-heart-fill"></i></ul>
+                <ul><i class="bi bi-bag-fill"></i></ul>
+            </ul>
+        </form>
     </div>
-    </div>    
+
+    
+
+    <!-- Sezione Flexbox -->
+<section class="flexbox-container">
+    <!-- Primo blocco: immagine, cuore e testo -->
+    <div class="flexbox-item">
+        <div class="image-container">
+            <img src="img/Paraboot Michael.jpg" alt="Style 1" class="product-image">
+        </div>
+
+        <div class="caption">
+            <p>FreakySet 1.</p>
+            <span class="product-price">€179,99</span>
+        </div>
+        <ul class="icon-container">
+            <li><i class="bi bi-heart-fill"></i></li>
+            <li><i class="bi bi-bag-fill"></i></li>
+        </ul>
+    </div>
+
+    <!-- Secondo blocco: immagine, cuore e testo -->
+    <div class="flexbox-item">
+        <div class="image-container">
+            <img src="img/efdaaba4-58fb-4b41-b0f8-8d787730d218.jpg" alt="Style 2" class="product-image">
+           
+        </div>
+        <div class="caption">
+            <p>FreakySet 2</p>
+            <span class="product-price">€179,99</span>
+        </div>
+        <ul class="icon-container">
+            <li><i class="bi bi-heart-fill"></i></li>
+            <li><i class="bi bi-bag-fill"></i></li>
+        </ul>
+    </div>
+
+    <!-- Terzo blocco: immagine, cuore e testo -->
+    <div class="flexbox-item">
+        <div class="image-container">
+            <img src="img/f6581aca-5f5a-496e-9778-37ef3101ede9.jpg" alt="Style 3" class="product-image">
+         
+        </div>
+        <div class="caption">
+            <p>FreakySet 3</p>
+            <span class="product-price">€179,99</span>
+        </div>
+        <ul class="icon-container">
+            <li><i class="bi bi-heart-fill"></i></li>
+            <li><i class="bi bi-bag-fill"></i></li>
+        </ul>
+    </div>
+   
+    <!-- Quarto blocco: immagine, cuore e testo -->
+    <div class="flexbox-item">
+        <div class="image-container">
+            <img src="img/giri _ ——————————————————————— 気温が上がった金曜日。….jpg" alt="Style 3" class="product-image">
+        </div>
+        <div class="caption">
+            <p>FreakySet 4</p>
+            <span class="product-price">€179,99</span>
+        </div>
+        <ul class="icon-container">
+            <li><i class="bi bi-heart-fill"></i></li>
+            <li><i class="bi bi-bag-fill"></i></li>
+        </ul>
+     
+        <!-- Quinto blocco: immagine, cuore e testo -->
+    <div class="flexbox-item">
+        <div class="image-container">
+            <img src="img/giri _ ——————————————————————— 気温が上がった金曜日。….jpg" alt="Style 3" class="product-image">
+        </div>
+        <div class="caption">
+            <p>FreakySet 5</p>
+            <span class="product-price">€179,99</span>
+        </div>
+        <ul class="icon-container">
+            <li><i class="bi bi-heart-fill"></i></li>
+            <li><i class="bi bi-bag-fill"></i></li>
+        </ul>
+    </div>
+    
+         <!-- Sesto blocco: immagine, cuore e testo -->
+        <div class="flexbox-item">
+        <div class="image-container">
+            <img src="img/giri _ ——————————————————————— 気温が上がった金曜日。….jpg" alt="Style 3" class="product-image">
+        </div>
+        <div class="caption">
+            <p>FreakySet 6</p>
+            <span class="product-price">€179,99</span>
+        </div>
+        <ul class="icon-container">
+            <li><i class="bi bi-heart-fill"></i></li>
+            <li><i class="bi bi-bag-fill"></i></li>
+        </ul>
+    </div>
+   
+        <!-- Settimo blocco: immagine, cuore e testo -->
+        <div class="flexbox-item">
+        <div class="image-container">
+            <img src="img/giri _ ——————————————————————— 気温が上がった金曜日。….jpg" alt="Style 3" class="product-image">
+        </div>
+        <div class="caption">
+            <p>FreakySet 7</p>
+            <span class="product-price">€179,99</span>
+        </div>
+        <ul class="icon-container">
+            <li><i class="bi bi-heart-fill"></i></li>
+            <li><i class="bi bi-bag-fill"></i></li>
+        </ul>
+    </div>
+    
+        <!-- Ottavo blocco: immagine, cuore e testo -->
+        <div class="flexbox-item">
+        <div class="image-container">
+            <img src="img/giri _ ——————————————————————— 気温が上がった金曜日。….jpg" alt="Style 3" class="product-image">
+        </div>
+        <div class="caption">
+            <p>FreakySet 8</p>
+            <span class="product-price">€179,99</span>
+        </div>
+        <ul class="icon-container">
+            <li><i class="bi bi-heart-fill"></i></li>
+            <li><i class="bi bi-bag-fill"></i></li>
+        </ul>
+    </div>
+</section>
+
+
+    <!-- Altri contenuti... -->
+    <!-- <h1>Välkommen till min sida</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus recusandae minima.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita debitis voluptatem corrupti mollitia sunt harum iusto iste rem sed voluptatibus.</p> -->
+
+    <!-- Altra immagine -->
+    <!-- <img src="img/640.jpg" class="img-fluid reduce-40" alt=""> -->
+
+    <!-- Audio -->
+    <!-- <audio src="https://www.televisiontunes.com/uploads/audio/Benny%20Hill%20Show.mp3" controls>Autoplay</audio> -->
+
+   
+
+    <!-- Immagine -->
+    <!-- <img src="img/abbigliamento-uomo-autunno-inverno-2018-03-510x766.jpg" class="img-fluid reduce-40" alt=""> -->
+
+    <!-- <h2>Mina intressen</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis odio voluptatum, delectus cumque optio ad, quisquam soluta mollitia cupiditate possimus inventore suscipit laborum similique magni amet aut ullam ipsam consectetur?</p> -->
+
+    <!-- Lista di interessi -->
+    <!-- <ul>
+        <li>Intressen 1</li>
+        <li>Intressen 2</li>
+        <li>Intressen 3</li>
+    </ul> -->
+
+    <!-- Video
+    <video src="https://dl6.webmfiles.org/big-buck-bunny_trailer.webm" controls></video> -->
+
+    <!-- Form di contatto -->
+    <h2>Kontakta mig</h2>
+    <form>
+        <label for="name">Namn</label>
+        <input id="name" type="text" placeholder="Ange namn" required maxlength="25">
+
+        <label for="message">Meddelande</label>
+        <textarea id="message" placeholder="Ange meddelande" required></textarea>
+
+        <button type="submit">Skicka</button>
+    </form>
+
 </body>
 </html>
