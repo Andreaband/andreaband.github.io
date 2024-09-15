@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreakyFashion</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Collegamento al foglio di stile esterno -->
+    <link rel="stylesheet" href="produktstyle.css">
+
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="background-image">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#">FreakyFashion.se</a>
+        
+        
+        <!-- Checkbox per il menu hamburger -->
+        <input type="checkbox" id="menu-toggle">
+        
+        <!-- Icona hamburger -->
+        <label for="menu-toggle" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+
+        <!-- Menu di navigazione -->
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="Produkt.html">Podukt</a>
+            <a href="#">Ny produkt</a>
+            <a href="#">Administration</a>
+        </div>
+    </nav>
+
+    <!-- Titolo principale -->
+    <h1 class="title center">FreakyFashion</h1>
+    
+    <!-- Immagine principale -->
+     <hr>
+    <img src="img/DALL·E 2024-09-12 09.47.01 - A stylish and elegant horizontal logo design with the text 'FreakyFashion' in calligraphy style. The colors should be autumnal, featuring deep oranges.webp" class="img-fluid reduce-40" alt="logo">
+    <hr>
+    
+
+    <h1>Produkt</h1>
+        <p>Casual Menswear Styling</p>
+   
+
+    <!-- Barra di ricerca -->
+    <div class="search-bar">
+        <form action="#" method="GET">
+            <input type="text" placeholder="Cerca nel sito..." name="search">
+            <button type="submit">Cerca</button>
+            <ul class="icon-container"></ul>
+                <ul><i class="bi bi-heart-fill"></i></ul>
+                <ul><i class="bi bi-bag-fill"></i></ul>
+            </ul>
+        </form>
+    </div>
+   <hr>
+
+   <!-- Hero -->
+   <div class="hero">
+    <div class="hero__text">
+        <h1>FreakyFashion</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sapiente similique dolorum pariatur expedita mollitia dolores iste quibusdam accusamus nemo.</p>
+        <a href="#" class="button">Köp</a>
+    </div>
+    <div class="hero__img">
+        <img src="img/5.jpg" alt="Hero Image">
+    </div>
+</div>
+
+
+
+  <!-- Sezione Flexbox prodotti -->
+<section class="flexbox-container">
+    <!-- Prodotto 1 -->
+    <div href="http://localhost:5000/product-details.html" class="flexbox-item">
+        <a class="image-container">
+            <img src="img/Paraboot Michael.jpg" alt="Style 1" class="product-image">
+        </a>
+        <div class="caption">
+            <h2>FreakySet 1</h2>
+            <span class="product-price">€179,99</span>
+        </div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam et perspiciatis soluta dignissimos dolore neque eaque quia placeat totam numquam!</p>
+        <ul class="icon-container">
+            <li><i class="bi bi-heart"></i></li>
+            <li><i class="bi bi-bag-fill"></i></li>
+        </ul>
+    </div>
+
+    <!-- Prodotto 2 -->
+    <div href="http://localhost:5000/product-details.html" class="flexbox-item">
+        <a class="image-container">
+            <img src="img/Paraboot Michael.jpg" alt="Style 1" class="product-image">
+        </a>
+        <div class="caption">
+            <h2>FreakySet 1</h2>
+            <span class="product-price">€179,99</span>
+        </div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam et perspiciatis soluta dignissimos dolore neque eaque quia placeat totam numquam!</p>
+        <ul class="icon-container">
+            <li><i class="bi bi-heart"></i></li>
+            <li><i class="bi bi-bag-fill"></i></li>
+        </ul>
+    </div>
+
+    <!-- Prodotto 3 -->
+    <div href="http://localhost:5000/product-details.html" class="flexbox-item">
+        <a class="image-container">
+            <img src="img/Paraboot Michael.jpg" alt="Style 1" class="product-image">
+        </a>
+        <div class="caption">
+            <h2>FreakySet 1</h2>
+            <span class="product-price">€179,99</span>
+        </div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam et perspiciatis soluta dignissimos dolore neque eaque quia placeat totam numquam!</p>
+        <ul class="icon-container">
+            <li><i class="bi bi-heart"></i></li>
+            <li><i class="bi bi-bag-fill"></i></li>
+        </ul>
+    </div>
+
+
+</section>
+
+    <!-- Form di contatto -->
+    <h2>Kontakta mig</h2>
+    <nav>
+        <ul class="icon-box">
+            <li>
+                <i class="bi bi-globe-americas"></i>
+            <span class="icon-caption">Gratis frakt och returer</span></li>
+            <li>
+                <i class="bi bi-airplane"></i>
+                <span class="icon-caption">Expressfrakt</span>
+            </li>
+            <li>
+                <i class="bi bi-shield-fill-check"></i>
+                <span class="icon-caption">Säkra betalningar</span>
+            </li>
+            <li>
+                <i class="bi bi-emoji-smile-fill"></i>
+                <span class="icon-caption">Nyheter varje dag</span>
+            </li>
+        </ul>
+    </nav>
+    
+
+    <form>
+        <label for="name">Namn</label>
+        <input id="name" type="text" placeholder="Ange namn" required maxlength="25">
+
+        <label for="message">Meddelande</label>
+        <textarea id="message" placeholder="Ange meddelande" required></textarea>
+
+        <button type="submit">Skicka</button>
+    </form>
+    
+    
+
+</body>
+</html>

@@ -17,6 +17,11 @@ label, input, textarea {
 img, video {
     width: 100%;
 }
+hr {
+    border: 1px solid black;
+}
+
+
 
 /* Navbar styling */
 .navbar {
@@ -127,9 +132,6 @@ input[type="checkbox"] {
     }
 }
 
-
-
-
 /* Stile per l'immagine ridotta e centrata */
 .reduce-40 {
     width: 100;
@@ -138,47 +140,69 @@ input[type="checkbox"] {
     margin: 0 auto;
 }
 
-/* Flexbox */
+/* Flexbox Container */
+.flexbox-container {
+    display: flex;
+    flex-direction: column; /* Default: immagini in verticale */
+    gap: 20px; /* Spazio tra i blocchi */
+}
 
+/* Flexbox Item */
 .flexbox-item {
     position: relative;
     margin-bottom: 20px;
+    border: 3px solid black; /* Bordo nero di 3px */
+    padding: 10px;
 }
 
-.image-container {
-    position: relative;
-    width: 100%;
-    display: inline-block;
-    
-}
-
+/* Immagine del prodotto */
 .product-image {
     width: 100%;
     height: auto;
     display: block;
-    border: 3px solid black; /* Aggiunge il bordo nero di 3px */
+    border-radius: 10px;
 }
 
+/* Icone cuoricino e borsa */
 .icon-container {
-    position: absolute;
-    right: 10px; /* Distanza dal bordo destro */
-    bottom: 25px; /* Distanza dal bordo inferiore */
-    list-style: none;
     display: flex;
-    gap: 10px; /* Spazio tra le icone */
+    justify-content: flex-end;
+    list-style: none;
+    gap: 10px;
+    padding: 10px 0;
 }
 
-.icon-container li {
-    font-size: 20px;
-    color: #000000; /* Colore delle icone */
-    cursor: pointer;
-}
-.icon-container ul {
-    font-size: 30px;
-    color: #000000; /* Colore delle icone */
-    cursor: pointer;
+/* Icone con didascalie */
+.icon-box {
+    display: flex;
+    flex-direction: column; /* Imposta le icone in verticale */
+    list-style: none;
+    gap: 20px;
+    padding-left: 0;
 }
 
+.icon-box li {
+    display: flex;
+    align-items: center; /* Allinea icona e didascalia orizzontalmente */
+    gap: 10px;
+    font-size: 30px; /* Dimensione delle icone */
+    color: black;
+}
+
+.icon-caption {
+    font-size: 16px; /* Dimensione della didascalia */
+    color: #333; /* Colore della didascalia */
+}
+
+/* Media query per disporre le icone orizzontalmente su schermi larghi */
+@media (min-width: 768px) {
+    .icon-box {
+        flex-direction: row; /* Cambia il layout in orizzontale */
+        justify-content: flex-start; /* Allinea le icone a sinistra */
+    }
+}
+
+/* Caption e prezzo del prodotto */
 .caption {
     display: flex;
     justify-content: space-between;
@@ -191,4 +215,131 @@ input[type="checkbox"] {
     color: #000;
 }
 
+/* Media Query per schermi più larghi: layout orizzontale */
+@media (min-width: 980px) {
+    .flexbox-container {
+        flex-direction: row; /* Immagini disposte orizzontalmente */
+        flex-wrap: wrap; /* Permette di andare a capo se necessario */
+        gap: 20px;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .flexbox-item {
+        width: 40%; /* Larghezza di ogni blocco su schermi grandi */
+    }
+}
 
+/* Layout orizzontale su schermi grandi */
+@media (min-width: 1024px) {
+    .product-flexbox {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        gap: 50px;
+    }
+
+    .product-flexbox .text-container {
+        flex: 1;
+        max-width: 500px;
+    }
+
+    .product-flexbox  {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .product-flexbox .product-image {
+        max-width: 400px;
+    }
+}
+
+/* Layout verticale su schermi medi */
+@media (min-width: 640px) and (max-width: 1023px) {
+    .product-flexbox {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .product-flexbox  {
+        text-align: center;
+    }
+}
+
+
+/* Stile del container principale del hero */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #f5f5f5;
+    min-height: 400px;
+}
+
+/* Sezione di testo */
+.hero__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra orizzontalmente */
+    justify-content: center; /* Centra verticalmente */
+    text-align: center;
+    max-width: 50%;
+    padding: 20px;
+}
+
+/* Titolo */
+.hero__text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Paragrafo */
+.hero__text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Bottone */
+.hero__text .button {
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.hero__text .button:hover {
+    background-color: #0056b3;
+}
+
+/* Immagine del hero */
+.hero__img img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero__text {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero__img img {
+        max-width: 100%;
+    }
+}
