@@ -370,5 +370,78 @@ input[type="checkbox"] {
         max-width: 100%;
     }
 }
+/* Stile del container del logo e della barra di ricerca */
+.grid-container-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Una colonna più piccola per il logo, una più grande per la ricerca */
+    align-items: center; /* Allinea verticalmente */
+    padding: 10px 50px; /* Spaziatura interna */
+    background-color: #0e1b3500; /* Colore di sfondo scuro */
+    gap: 20px; /* Spaziatura tra le colonne */
+}
 
+/* Stile del logo */
+.logo1 img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Stile della barra di ricerca */
+.search-bar form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #000000;
+}
+
+/* Stile delle icone */
+.icon-container {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.icon-container li {
+    font-size: 24px;
+    color: #000000;
+}
+
+/* Riduzione dimensioni per schermi piccoli */
+@media (max-width: 768px) {
+    .grid-container-header {
+        grid-template-columns: 1fr; /* Su schermi piccoli, si impila verticalmente */
+        text-align: center;
+    }
+
+    .search-bar form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%; /* Barra di ricerca più ampia su schermi piccoli */
+    }
+}
 
