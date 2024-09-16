@@ -301,7 +301,7 @@ input[type="checkbox"] {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px;
+    padding: 10px;
     background-color: #f5f5f5;
     min-height: 400px;
     flex-direction: row-reverse;
@@ -442,6 +442,60 @@ input[type="checkbox"] {
 
     .search-bar input[type="text"] {
         width: 100%; /* Barra di ricerca più ampia su schermi piccoli */
+    }
+}
+
+/* Stile di base per la text-box */
+.text-box {
+    display: flex;
+    flex-direction: column; /* Colonna su schermi piccoli */
+    justify-content: flex-start; /* Allinea a sinistra */
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #f5f5f5;
+    gap: 10px;
+}
+
+/* Stile dei paragrafi all'interno della text-box */
+.text-box p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Quando lo schermo è grande (1024px o più), diventa orizzontale */
+@media (min-width: 1024px) {
+    .text-box {
+        flex-direction: row; /* Disposizione orizzontale */
+        justify-content: flex-start; /* Distribuisce gli elementi equamente */
+    }
+}
+
+
+/* Container Spot */
+.container_spot {
+    display: none; /* Nasconde il container sotto 640px */
+    gap: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container_spot > div {
+    border: 1px solid black;
+    height: auto; /* Permette alla div di adattarsi all'altezza dell'immagine */
+}
+
+.container_spot img {
+    width: 100%; /* L'immagine occupa tutta la larghezza disponibile del suo contenitore */
+    height: auto; /* Mantiene le proporzioni originali dell'immagine */
+    display: block; /* Evita spazi bianchi sotto le immagini */
+}
+
+
+@media (min-width: 1024px) {
+    .container_spot {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
     }
 }
 
