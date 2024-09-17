@@ -3,7 +3,7 @@ body {
     padding: 0 80px;
 }
 
-h1, h2, p {
+h1, h2{
     text-align: center;
 }
 
@@ -147,7 +147,7 @@ input[type="checkbox"] {
 .flexbox-item {
     position: relative;
     margin-bottom: 20px;
-    border: 3px solid black;
+    border: 0px solid black;
     padding: 10px;
 }
 
@@ -155,6 +155,7 @@ input[type="checkbox"] {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 10px;
 }
 
 /* Icone */
@@ -497,5 +498,89 @@ input[type="checkbox"] {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr; 
     }
+    
 }
 
+/* Footer Stili */
+.footer {
+    background-color: #f0f0f0;
+    padding: 40px 0;
+    border-top: 2px solid #000;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* allineamento del testo a sinistra */
+    padding: 0 40px;
+    gap: 40px;
+}
+
+.footer-column h3 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 2px solid #000;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+
+}
+
+.sale {
+    background-color: #007bff;
+    color: white;
+    padding: 3px;
+    display: none;
+}
+
+
+@media (max-width: 640px) {
+
+    .sale {
+        background-color: #007bff;
+        color: white;
+        padding: 3px;
+        display: block;
+    }
+}
