@@ -332,6 +332,7 @@ input[type="checkbox"] {
     .hero {
         flex-direction: column;
         text-align: center;
+        flex-direction: column-reverse;
     }
 
     .hero__text {
@@ -500,4 +501,72 @@ input[type="checkbox"] {
         padding: 3px;
         display: block;
     }
+}
+
+/* Stile di base per la text-box */
+.text-box {
+    display: flex;
+    flex-direction: column; /* Colonna su schermi piccoli */
+    justify-content: flex-start; /* Allinea a sinistra */
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #f5f5f5;
+    gap: 10px;
+}
+
+/* Stile dei paragrafi all'interno della text-box */
+.text-box p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Quando lo schermo è grande (1024px o più), diventa orizzontale */
+@media (min-width: 640px) {
+    .text-box {
+       flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+
+.liknande{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* allineamento del testo a sinistra */
+    padding: 0 20px;
+    gap: 40px;
+}
+
+@media(max-width: 1024px) {
+    .liknande {
+        display: none;
+    }
+}
+/* Container Spot */
+.container_spot {
+    display: none; /* Nasconde il container sotto 640px */
+    gap: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container_spot > div {
+    border: 1px solid black;
+    height: auto; /* Permette alla div di adattarsi all'altezza dell'immagine */
+}
+
+.container_spot img {
+    width: 100%; /* L'immagine occupa tutta la larghezza disponibile del suo contenitore */
+    height: auto; /* Mantiene le proporzioni originali dell'immagine */
+    display: block; /* Evita spazi bianchi sotto le immagini */
+}
+
+
+@media (min-width: 1024px) {
+    .container_spot {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+    
 }

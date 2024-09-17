@@ -360,6 +360,7 @@ input[type="checkbox"] {
     .hero {
         flex-direction: column;
         text-align: center;
+        flex-direction: column-reverse;
     }
 
     .hero__text {
@@ -465,41 +466,15 @@ input[type="checkbox"] {
 }
 
 /* Quando lo schermo è grande (1024px o più), diventa orizzontale */
-@media (min-width: 1024px) {
+@media (min-width: 640px) {
     .text-box {
-        flex-direction: row; /* Disposizione orizzontale */
-        justify-content: flex-start; /* Distribuisce gli elementi equamente */
+       flex-direction: row;
+        justify-content: flex-start;
     }
 }
 
 
-/* Container Spot */
-.container_spot {
-    display: none; /* Nasconde il container sotto 640px */
-    gap: 10px;
-    width: 80%;
-    margin: 0 auto;
-}
 
-.container_spot > div {
-    border: 1px solid black;
-    height: auto; /* Permette alla div di adattarsi all'altezza dell'immagine */
-}
-
-.container_spot img {
-    width: 100%; /* L'immagine occupa tutta la larghezza disponibile del suo contenitore */
-    height: auto; /* Mantiene le proporzioni originali dell'immagine */
-    display: block; /* Evita spazi bianchi sotto le immagini */
-}
-
-
-@media (min-width: 1024px) {
-    .container_spot {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr; 
-    }
-    
-}
 
 /* Footer Stili */
 .footer {
