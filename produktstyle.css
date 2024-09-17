@@ -466,7 +466,7 @@ input[type="checkbox"] {
 }
 
 /* Quando lo schermo è grande (1024px o più), diventa orizzontale */
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
     .text-box {
        flex-direction: row;
         justify-content: flex-start;
@@ -557,5 +557,20 @@ input[type="checkbox"] {
         color: white;
         padding: 3px;
         display: block;
+    }
+}
+
+.liknande{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* allineamento del testo a sinistra */
+    padding: 0 20px;
+    gap: 40px;
+}
+
+@media(max-width: 1024px) {
+    .liknande {
+        display: none;
     }
 }
