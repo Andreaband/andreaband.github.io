@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkter</title>
+    <link rel="stylesheet" href="Administrationstyle.css">
+
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+     <!-- Navbar -->
+     <nav class="navbar">
+        <a href="#">FreakyFashion.se</a>
+        
+        
+        <!-- Checkbox per il menu hamburger -->
+        <input type="checkbox" id="menu-toggle">
+        
+        <!-- Icona hamburger -->
+        <label for="menu-toggle" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+
+        <!-- Menu di navigazione -->
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="Produkt.html">Podukt</a>
+            <a href="Lista Produkter.html">Lista Produkter</a>
+            <a href="#">Administration</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="sidebar">
+            <h3>Administration</h3>
+            <ul>
+                <li><a href="Produkt.html">Produkter</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <header>
+                <h1>Ny produkt</h1>
+            </header>
+            <form>
+                <div class="form-group">
+                    <label for="name">Namn</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Beskrivning</label>
+                    <textarea id="description" name="description" rows="4" placeholder=""></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Bild</label>
+                    <input type="file" id="image" name="image" placeholder="Välja en fil.">
+                </div>
+
+                <div class="form-group">
+                    <label for="sku">SKU</label>
+                    <input type="text" id="sku" name="sku">
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Pris</label>
+                    <input type="number" id="price" name="price" placeholder="">
+                </div>
+
+                <div class="form-group">
+                    <label for="categories">Kategorier</label>
+                    <div id="categories">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="tshirts" name="category" value="T-Shirts">
+                            <label for="tshirts">T-Shirts</label>
+                        </div>
+                
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="summer" name="category" value="Sommar">
+                            <label for="summer">Sommar</label>
+                        </div>
+                
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="pants" name="category" value="Byxor">
+                            <label for="pants">Byxor</label>
+                        </div>
+                
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="shoes" name="category" value="Skor">
+                            <label for="shoes">Skor</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Lägg till</button>
+                
+                </div>
+               
+            </form>
+        </div>
+    </div>
+</body>
+</html>
