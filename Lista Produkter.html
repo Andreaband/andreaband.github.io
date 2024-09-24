@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkter</title>
+    <link rel="stylesheet" href="Produkter_style.css">
+
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+     <!-- Navbar -->
+     <nav class="navbar">
+        <a href="#">FreakyFashion.se</a>
+        
+        
+        <!-- Checkbox per il menu hamburger -->
+        <input type="checkbox" id="menu-toggle">
+        
+        <!-- Icona hamburger -->
+        <label for="menu-toggle" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+
+        <!-- Menu di navigazione -->
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="Produkt.html">Podukt</a>
+            <a href="#">Lista Produkter</a>
+            <a href="Administration.html">Administration</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="sidebar">
+            <h3>Administration</h3>
+            <ul>
+                <li><a href="Produkt.html">Produkter</a></li>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <h2>Produkter</h2>
+            <button class="new-product-btn" onclick="alert('Godkänd')">Ny produkt</button>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Namn</th>
+                        <th>SKU</th>
+                        <th>Pris</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#">Svart T-Shirt</a></td>
+                        <td>AAA111</td>
+                        <td>199</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Vit T-Shirt</a></td>
+                        <td>BBB111</td>
+                        <td>199</td>
+                    </tr>
+                    <tr>
+                        <td>---</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

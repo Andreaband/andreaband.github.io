@@ -132,18 +132,12 @@ input[type="checkbox"] {
     }
 }
 
-/* Stile per l'immagine ridotta e centrata */
-.reduce-40 {
-    width: 100;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
+
 
 /* Flexbox Container */
 .flexbox-container {
     display: flex;
-    flex-direction: column; /* Default: immagini in verticale */
+    flex-direction: column;
     gap: 20px; /* Spazio tra i blocchi */
 }
 
@@ -162,16 +156,6 @@ input[type="checkbox"] {
     display: block;
     border-radius: 10px;
 }
-
-/* Icone cuoricino e borsa */
-.icon-container {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    gap: 10px;
-    padding: 10px 0;
-}
-
 /* Icone con didascalie */
 .icon-box {
     display: flex;
@@ -201,6 +185,69 @@ input[type="checkbox"] {
         justify-content: flex-start; /* Allinea le icone a sinistra */
     }
 }
+/* Immagine del prodotto */
+.image-container {
+    position: relative;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Posiziona il badge "Nyhet" in alto a sinistra sopra l'immagine */
+.new-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f00;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Posiziona l'icona del cuore sopra l'immagine, in basso a destra */
+.heart-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 1; /* Per garantire che sia sopra l'immagine */
+}
+
+/* Animazione quando si clicca sul cuore */
+.heart-icon:active {
+    transform: scale(1.2);
+}
+
+/* Contenitore immagine */
+.image-container {
+    position: relative; /* Permette di posizionare l'icona rispetto all'immagine */
+}
+
+/* Icona cuore */
+.heart-icon {
+    position: absolute;
+    bottom: 10px; 
+    right: 10px; /* Distanza dal bordo destro dell'immagine */
+    font-size: 24px; /* Dimensione del cuore */
+    color: black; /* Colore dell'icona */
+    transition: transform 0.3s ease; /* Animazione per il click */
+}
+
+/* Animazione quando cliccata */
+.heart-icon:active {
+    transform: scale(1.3); /* Ingrandisce l'icona durante il click */
+}
+
 
 /* Caption e prezzo del prodotto */
 .caption {
@@ -215,18 +262,31 @@ input[type="checkbox"] {
     color: #000;
 }
 
-/* Media Query per schermi più larghi: layout orizzontale */
-@media (min-width: 980px) {
+/* Layout per schermi medi */
+@media (min-width: 640px) {
     .flexbox-container {
         flex-direction: row; /* Immagini disposte orizzontalmente */
         flex-wrap: wrap; /* Permette di andare a capo se necessario */
         gap: 20px;
-        flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
     }
     
     .flexbox-item {
-        width: 40%; /* Larghezza di ogni blocco su schermi grandi */
+        width: 45%; /* Due colonne su schermi medi */
+    }
+}
+
+/* Layout per schermi grandi: 4 colonne */
+@media (min-width: 1024px) {
+    .flexbox-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .flexbox-item {
+        width: 21%; /* Quattro colonne su schermi grandi */
     }
 }
 
@@ -245,7 +305,7 @@ input[type="checkbox"] {
         max-width: 500px;
     }
 
-    .product-flexbox  {
+    .product-flexbox {
         flex: 1;
         display: flex;
         justify-content: center;
@@ -264,10 +324,11 @@ input[type="checkbox"] {
         text-align: center;
     }
 
-    .product-flexbox  {
+    .product-flexbox {
         text-align: center;
     }
 }
+
 
 
 /* Stile del container principale del hero */
@@ -430,7 +491,7 @@ input[type="checkbox"] {
 .footer-container {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: baseline;
     /* allineamento del testo a sinistra */
     padding: 0 40px;
     gap: 40px;
@@ -476,7 +537,7 @@ input[type="checkbox"] {
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
-        align-items: center;
+        align-items: baseline;
         text-align: left;
     }
 
@@ -547,7 +608,7 @@ input[type="checkbox"] {
 .container_spot {
     display: none; /* Nasconde il container sotto 640px */
     gap: 10px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 
