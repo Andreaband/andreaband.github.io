@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produkter</title>
     <link rel="stylesheet" href="Administrationstyle.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Font Google -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -37,7 +38,7 @@
             <a href="#">Administration</a>
         </div>
     </nav>
-    <div class="container">
+    <div class="container-sida">
         <div class="sidebar">
             <h3>Administration</h3>
             <ul>
@@ -74,31 +75,27 @@
                     <label for="price">Pris</label>
                     <input type="number" id="price" name="price" placeholder="">
                 </div>
+                
+                
+                <label class="select-none container block relative cursor-pointer text-xl pl-8">T-shirt
+                    <input class="absolute opacity-0 left-0 top-0 cursor-pointer" type="checkbox" checked="checked">
+                    <span class="h-6 w-6 checkmark absolute top-0 left-0 bg-gray-400"></span>
+                  </label>
+                <label class="select-none container block relative cursor-pointer text-xl pl-8">Sommar
+                    <input class="absolute opacity-0 left-0 top-0 cursor-pointer" type="checkbox" checked="checked">
+                    <span class="h-6 w-6 checkmark absolute top-0 left-0 bg-gray-400"></span>
+                  </label>
+                <label class="select-none container block relative cursor-pointer text-xl pl-8">Byxor
+                    <input class="absolute opacity-0 left-0 top-0 cursor-pointer" type="checkbox" checked="checked">
+                    <span class="h-6 w-6 checkmark absolute top-0 left-0 bg-gray-400"></span>
+                  </label>
+                <label class="select-none container block relative cursor-pointer text-xl pl-8">Skor
+                    <input class="absolute opacity-0 left-0 top-0 cursor-pointer" type="checkbox" checked="checked">
+                    <span class="h-6 w-6 checkmark absolute top-0 left-0 bg-gray-400"></span>
+                  </label>
+                
 
-                <div class="form-group">
-                    <label for="categories">Kategorier</label>
-                    <div id="categories">
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="tshirts" name="category" value="T-Shirts">
-                            <label for="tshirts">T-Shirts</label>
-                        </div>
                 
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="summer" name="category" value="Sommar">
-                            <label for="summer">Sommar</label>
-                        </div>
-                
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="pants" name="category" value="Byxor">
-                            <label for="pants">Byxor</label>
-                        </div>
-                
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="shoes" name="category" value="Skor">
-                            <label for="shoes">Skor</label>
-                        </div>
-                    </div>
-                </div>
                 <button type="submit" class="submit-btn">Lägg till</button>
                 
                 </div>
@@ -106,5 +103,6 @@
             </form>
         </div>
     </div>
+   
 </body>
 </html>

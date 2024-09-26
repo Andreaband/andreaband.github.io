@@ -534,35 +534,46 @@ input[type="checkbox"] {
 }
 
 /* Responsività */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .footer-container {
-        flex-direction: column;
+        flex-direction: row;
         align-items: baseline;
         text-align: left;
+        justify-content: space-between;
+    }
+    .footer {
+        background-color: #f0f0f0;
+        padding: 0;
+        border-top: 2px solid #000;
     }
 
     .footer-column {
         margin-bottom: 20px;
+        flex: 1; 
+        margin-right: 20px; 
     }
 }
 
-.sale {
-    background-color: #007bff;
-    color: white;
-    padding: 3px;
+
+.responsive-footer {
     display: none;
-}
+  }
+  
 
-
-@media (max-width: 640px) {
-
-    .sale {
-        background-color: #007bff;
-        color: white;
-        padding: 3px;
-        display: block;
+  @media (min-width: 640px) {
+    .responsive-footer {
+      display: flex;
     }
-}
+  }
+
+  /* Nasconde l'accordion per schermi di 640px o più */
+@media (min-width: 640px) {
+    .accordion {
+      display: none;
+    }
+  }
+  
+
 
 /* Stile di base per la text-box */
 .text-box {

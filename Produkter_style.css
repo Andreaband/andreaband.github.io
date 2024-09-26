@@ -3,7 +3,7 @@ body {
     padding: 0 80px;
 }
 
-h1{
+h1 {
     text-align: center;
 }
 
@@ -16,6 +16,7 @@ label, input, textarea {
 img, video {
     width: 100%;
 }
+
 hr {
     border: 1px solid black;
 }
@@ -93,7 +94,6 @@ input[type="checkbox"] {
     }
 }
 
-
 /* Layout a griglia per la pagina */
 .container {
     display: grid;
@@ -143,8 +143,6 @@ h2 {
     /* sposta il bottone a destra */
     float: right; 
     margin-bottom: 10px;
-    
-    
 }
 
 table {
@@ -168,5 +166,37 @@ table td a {
     text-decoration: none;
 }
 
+/* Layout responsive */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 0 20px;
+    }
 
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
 
+    .sidebar {
+        padding: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
+
+/* Media Query per schermi molto piccoli (sotto i 480px) */
+@media screen and (max-width: 480px) {
+    .new-product-btn {
+        width: 100%;
+        padding: 15px;
+    }
+
+    table th, table td {
+        font-size: 14px;
+        padding: 5px;
+    }
+}

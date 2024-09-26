@@ -3,7 +3,7 @@ body {
     padding: 0 80px;
 }
 
-h1{
+h1 {
     text-align: center;
 }
 
@@ -16,6 +16,7 @@ label, input, textarea {
 img, video {
     width: 100%;
 }
+
 hr {
     border: 1px solid black;
 }
@@ -94,7 +95,7 @@ input[type="checkbox"] {
 }
 
 /* Layout a griglia per la pagina */
-.container {
+.container-sida {
     display: grid;
     grid-template-columns: 200px 1fr;
     height: 100vh;
@@ -188,7 +189,7 @@ button.submit-btn {
     font-size: 16px;
 }
 
-button.submit-btn{
+button.submit-btn:hover {
     background-color: #0056b3;
 }
 
@@ -218,3 +219,87 @@ table td a:hover {
     text-decoration: underline;
 }
 
+/* Checkbox custom */
+.container:hover input ~ .checkmark {
+    background-color: #a0aec0;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: #0078d4;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 9px;
+    top: 6px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    body {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 0 20px;
+    }
+
+    .container-sida {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .sidebar {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    table th, table td {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 0 10px;
+    }
+
+    .container-sida {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button.submit-btn {
+        width: 100%;
+        padding: 15px;
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    form {
+        width: 100%;
+    }
+}
