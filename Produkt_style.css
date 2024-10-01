@@ -6,6 +6,10 @@ body {
 h1, h2{
     text-align: center;
 }
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
 
 label, input, textarea {
     display: block;

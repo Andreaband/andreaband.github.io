@@ -7,6 +7,10 @@ h1, h2{
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
 
 label, input, textarea {
     display: block;
