@@ -211,6 +211,7 @@ input[type="checkbox"] {
 .product-price {
     font-weight: bold;
     color: #000;
+    font-size: 30pxpx;
 }
 
 /* Flexbox orizzontale su schermi larghi */
