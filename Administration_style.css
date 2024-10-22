@@ -47,21 +47,26 @@ hr {
 .navbar .menu a {
     margin-right: 15px;
 }
-/* Hamburger Menu */
+/* Hamburger menu styles */
 .hamburger {
-    display: none;
+    display: flex; /* Rendi visibile l'hamburger */
     flex-direction: column;
     cursor: pointer;
-    align-items: end;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 10; /* Assicura che l'hamburger sia sopra il contenuto */
 }
 
 .hamburger div {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: white; /* Colore delle linee */
     margin: 5px 0;
+    transition: 0.4s; /* Animazione delle linee */
 }
-
 input[type="checkbox"] {
     display: none;
 }

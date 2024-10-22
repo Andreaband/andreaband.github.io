@@ -162,7 +162,7 @@
   
 </div>
 <!-- Quinto blocco: immagine, cuore e testo -->
-<div class="flexbox-item">
+<div class="flexbox-item hidden">
     <a href="http://localhost:5000/product-details.html" class="image-container">
         <img src="img/download.jpg" alt="Style 3" class="product-image">
         
@@ -177,7 +177,7 @@
     
 </div>
 <!-- Sesto blocco: immagine, cuore e testo -->
-<div class="flexbox-item">
+<div class="flexbox-item hidden">
     <a href="http://localhost:5000/product-details.html" class="image-container">
         <img src="img/Wednesday - 09_19_18 - MyCreativeLook.jpg" alt="Style 3" class="product-image">
         
@@ -192,7 +192,7 @@
   
 </div>
 <!-- Settimo blocco: immagine, cuore e testo -->
-<div class="flexbox-item">
+<div class="flexbox-item hidden">
     <a href="http://localhost:5000/product-details.html" class="image-container">
         <img src="img/The Bison Insulated Fit.jpg" alt="Style 3" class="product-image">
         <i class="bi bi-heart heart-icon"></i>
@@ -205,7 +205,7 @@
     
 </div>
 <!-- Ottavo blocco: immagine, cuore e testo -->
-<div class="flexbox-item">
+<div class="flexbox-item hidden">
     <a href="http://localhost:5000/product-details.html" class="image-container">
         <img src="img/download-2.jpg" alt="Style 3" class="product-image">
 
@@ -219,6 +219,7 @@
    
 </div>
 </section>
+<button id="show-more" class="show-more-btn">Visa mer</button>
 
 <!-- Form di contatto -->
 <h2>Kontakta mig</h2>
@@ -271,5 +272,24 @@
     </div>
 </footer>
 
+    <script>
+                    // script deli prodotti a scomparsa
+                    
+document.getElementById("show-more").addEventListener("click", function() {
+    // Seleziona solo i blocchi nascosti quando la finestra è tra 640px e 1024px
+    const hiddenItems = document.querySelectorAll(".flexbox-item:nth-child(n+5)");
+
+    // Mostra gli elementi nascosti
+    hiddenItems.forEach(item => {
+        item.style.display = 'block'; // Imposta display a block solo per mostrarli
+    });
+
+    // Nascondi il pulsante dopo che gli elementi sono stati mostrati
+    this.style.display = "none";
+});
+
+
+
+    </script>
 </body>
 </html>
