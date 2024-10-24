@@ -1,0 +1,308 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0 80px;
+}
+
+h1 {
+    text-align: center;
+}
+
+label, input, textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+img, video {
+    width: 100%;
+}
+
+hr {
+    border: 1px solid black;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #461010;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+
+.navbar a:hover {
+    background-color: #3c3c3a;
+}
+
+.navbar .menu {
+    display: flex;
+}
+
+.navbar .menu a {
+    margin-right: 15px;
+}
+/* Hamburger menu styles */
+.hamburger {
+    display: flex; /* Rendi visibile l'hamburger */
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 10; /* Assicura che l'hamburger sia sopra il contenuto */
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white; /* Colore delle linee */
+    margin: 5px 0;
+    transition: 0.4s; /* Animazione delle linee */
+}
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Navbar responsive */
+@media screen and (max-width: 768px) {
+    .navbar .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .navbar .menu a {
+        padding: 15px;
+        margin: 0;
+        text-align: center;
+    }
+
+    input[type="checkbox"]:checked ~ .menu {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Layout a griglia per la pagina */
+.container-sida {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Sidebar (colonna di sinistra) */
+.sidebar {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h3 {
+    margin: 0;
+}
+
+.sidebar ul {
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+}
+/* Contenuto principale (colonna di destra) */
+.main-content {
+    padding: 20px;
+    background-color: white;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+/* Stili del form */
+form {
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input[type="file"] {
+    padding: 5px;
+}
+
+.form-group input[type="number"] {
+    width: 100%;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button.submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Tabella e altri stili per organizzazione del contenuto */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+table td a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+table td a:hover {
+    text-decoration: underline;
+}
+
+/* Checkbox custom */
+.container:hover input ~ .checkmark {
+    background-color: #a0aec0;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: #0078d4;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 9px;
+    top: 6px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    body {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 0 20px;
+    }
+
+    .container-sida {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .sidebar {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    table th, table td {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 0 10px;
+    }
+
+    .container-sida {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button.submit-btn {
+        width: 100%;
+        padding: 15px;
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    form {
+        width: 100%;
+    }
+}
