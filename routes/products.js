@@ -1,5 +1,5 @@
 const express = require("express");
-const router = express.Router();  // Usa express.Router() per il routing
+const router = express.Router();  // Usa express.Router()
 
 // Rotta dinamica per i prodotti basata sullo slug
 router.get("/:productSlug", (req, res) => {
@@ -25,10 +25,9 @@ router.get("/:productSlug", (req, res) => {
     // Controlla se il prodotto esiste
     const product = products[productSlug];
     if (product) {
-        // Se il prodotto esiste, renderizza la pagina con il template ejs
+        // Renderizza la pagina con il template EJS e i dati del prodotto
         res.render("product", { product });
     } else {
-        // Se non esiste, mostra una pagina 404
         res.status(404).send("Prodotto non trovato");
     }
 });

@@ -1,13 +1,21 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
-app.use(express.static("public"))
+// Configura la cartella per i file statici
+app.use(express.static("public"));
 
-app.set("view engine", "ejs")
+// Imposta EJS come motore di visualizzazione
+app.set("view engine", "ejs");
 
-const userRouter = require("./routes/users")
+// Importa i router per utenti e prodotti
+const userRouter = require("./routes/users");
+const productRouter = require("./routes/products"); // Aggiungi il router dei prodotti
 
-app.use("/users", userRouter)
+// Associa i percorsi ai rispettivi router
+app.use("/users", userRouter);
+app.use("/Produkt", productRouter);  // Route per i dettagli del prodotto
 
-app.listen(3000)
-
+// Avvia il server sulla porta 3000
+app.listen(3000, () => {
+    console.log('Server in ascolto su http://localhost:3000');
+});
